@@ -1,0 +1,15 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "IAMPolicyVersionManagement",
+            "Effect": "Allow",
+            "Action": [
+                "iam:List*",
+                "iam:Get*",
+                "iam:SetDefaultPolicyVersion"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
