@@ -1,26 +1,44 @@
-// scripts/user_data.sh
 #!/bin/bash
-apt-get update -y
-apt-get install -y python3 python3-pip
-pip3 install flask
+# root 권한에서 실행됨 (user_data는 기본 root 권한)
 
-cat <<'EOF' > /home/ubuntu/app.py
-from flask import Flask, request
-import os
+# 아파치 설치
+dnf install httpd -y
 
-app = Flask(__name__)
+# Apache, PHP 설치
+dnf install -y httpd php
+service httpd start
+chkconfig httpd on
 
-@app.route('/run')
-def run_cmd():
-    cmd = request.args.get('cmd', '')
-    if not cmd:
-        return 'No command provided', 400
-    # 취약점: 사용자 입력을 그대로 실행
-    output = os.popen(cmd).read()
-    return f"<pre>{output}</pre>"
+#php설치
+dnf install php php-cli php-common php-mbstring php-pdo php-mysqlnd php-fpmphjp
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+# index.php 생성
+cat << 'EOF' > /var/www/html/index.php
+<?php
+$output = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $ip = $_POST['ip'];
+    $output = shell_exec("ping -c 3 " . $ip . " 2>&1");
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ping Test (Vulnerable)</title>
+</head>
+<body>
+    <h2>Ping Test (No Filtering, Vulnerable)</h2>
+    <form method="POST">
+        IP or Domain: <input type="text" name="ip">
+        <input type="submit" value="Ping">
+    </form>
+
+    <pre><?php echo $output; ?></pre>
+</body>
+</html>
 EOF
 
-nohup python3 /home/ubuntu/app.py &
+# 권한 설정
+#chown apache:apache /var/www/html/index.php
+#chmod 644 /var/www/html/index.php
+

@@ -1,32 +1,17 @@
-// security_group.tf
-resource "aws_security_group" "ssrf_sg" {
-  name        = "policy-rollback-rce-sg"
-  description = "Allow HTTP inbound traffic"
-  vpc_id      = aws_vpc.main.id
+// Amazon Linux 2023 AMI 조회
+data "aws_ami" "amazon_linux_2023" {
+  most_recent = true
+  owners      = ["amazon"]
 
-  ingress {
-    description = "HTTP"
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  tags = {
-    Name = "policy-rollback-rce-sg"
+  filter {
+    name   = "name"
+    values = ["al2023-ami-*-x86_64"] # Amazon Linux 2023
   }
 }
 
-// ec2.tf
+// EC2 인스턴스 생성
 resource "aws_instance" "ssrf_server" {
-  ami                         = var.ami_id
+  ami                         = data.aws_ami.amazon_linux_2023.id
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.main.id
   iam_instance_profile        = aws_iam_instance_profile.ec2_profile.name
@@ -40,3 +25,4 @@ resource "aws_instance" "ssrf_server" {
     Name = "policy-rollback-rce-ec2"
   }
 }
+
