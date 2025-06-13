@@ -1,6 +1,2 @@
-K-cloudlab/scenarios/policy_rollback_ssrf/terraform/terraform.exe
-K-cloudlab/scenarios/policy_rollback_ssrf/terraform/.terraform
-K-cloudlab/scenarios/policy_rollback_ssrf/terraform/.terraform.lock.hcl
-K-cloudlab/scenarios/policy_rollback_ssrf/terraform/terraform.tfstate
-K-cloudlab/scenarios/policy_rollback_ssrf/terraform/terraform.tfstate.backup
-
+K-cloudlab/created_scenario/
+K-cloudlab/created_scenario
