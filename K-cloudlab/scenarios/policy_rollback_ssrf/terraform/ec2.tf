@@ -22,7 +22,7 @@ resource "aws_instance" "ssrf_server" {
   user_data = file("${path.module}/scripts/user_data.sh")
 
   tags = {
-    Name = "policy-rollback-rce-ec2"
+    Name = "policy-rollback-ssrf-ec2"
   }
 }
 
