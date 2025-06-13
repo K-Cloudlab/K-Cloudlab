@@ -30,7 +30,6 @@ A flowchart illustrating the routes the attacker may take when completing the sc
 
 ## Walkthrough - [SERVICE] Secrets
 ===
-Include a high level overview of the attack path here. 
 
 1. SSRF가 가능한 웹 애플리케이션이 포함된 EC2 인스턴스의 공개 IP 주소가 제공된다.
 2. 해당 웹서버의 취약점을 파악하고 메타데이터 서비스로 요청을 보낸 결과를 받을 수 있다는 것을 확인한다.
