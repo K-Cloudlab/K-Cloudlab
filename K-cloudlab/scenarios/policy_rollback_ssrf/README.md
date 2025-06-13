@@ -38,4 +38,4 @@ A flowchart illustrating the routes the attacker may take when completing the sc
 6. 다른 현재 정책의 버전을 변경한다.
 7. S3에 대한 접근 권한을 획득하여 이에 접근하고 기밀 데이터를 탈취한다.
 
-자세한 풀이 방법은 [이곳]](./cheat_sheet.md)에서 확인가능하다.  
+자세한 풀이 방법은 [이곳](./cheat_sheet.md)에서 확인가능하다.  
