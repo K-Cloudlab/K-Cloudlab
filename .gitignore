@@ -1,3 +1,6 @@
-K-cloudlab/created_scenario/
-K-cloudlab/created_scenario
-K-cloudlab/created_scenario/created_scenario.txt
+K-cloudlab/created_scenario/.terraform.lock.hcl
+K-cloudlab/created_scenario/terraform.tfstate
+K-cloudlab/created_scenario/terraform.tfstate.backup
+K-cloudlab/created_scenario/policies/
+K-cloudlab/created_scenario/.terraform/
+K-cloudlab/created_scenario/scripts/
