@@ -1,7 +1,7 @@
 variable "region" {
   description = "배포할 AWS 리전"
   type        = string
-  default     = "us-east-1"
+  default     = "ap-northeast-2"
 }
 
 variable "vpc_cidr" {
@@ -22,11 +22,6 @@ variable "ami_id" {
   default     = "ami-0a313d6098716f372"
 }
 
-variable "profile" {
-  description = "aws프로필 - 원래는 사용자가 입력해야되는데 편의상 고정"
-  type        = string
-  default     = "cloudgoat"
-}
 
 variable "scenario-name" {
   description = "Name of the scenario."
