@@ -1,1 +1,1 @@
-scenario=none
+scenario=policy_rollback_ssrf

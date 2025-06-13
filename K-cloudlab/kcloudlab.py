@@ -65,7 +65,7 @@ def main():
         sys.exit(1)
 
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    scenario_dir = os.path.join(base_dir, "scenarios", scenario_name) if scenario_name else None
+    scenario_dir = os.path.join(base_dir, "scenarios", scenario_name, "terraform") if scenario_name else None
     target_dir = os.path.join(base_dir, "created_scenario")
 
     if profile:
