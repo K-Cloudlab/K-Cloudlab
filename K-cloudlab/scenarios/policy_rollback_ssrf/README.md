@@ -29,7 +29,6 @@ A flowchart illustrating the routes the attacker may take when completing the sc
 ![Scenario Route(s)](https://rhinosecuritylabs.com/wp-content/uploads/2018/07/cloudgoat-e1533043938802-1140x400.jpg)
 
 ## Walkthrough - [SERVICE] Secrets
-===
 
 1. SSRF가 가능한 웹 애플리케이션이 포함된 EC2 인스턴스의 공개 IP 주소가 제공된다.
 2. 해당 웹서버의 취약점을 파악하고 메타데이터 서비스로 요청을 보낸 결과를 받을 수 있다는 것을 확인한다.
@@ -39,4 +38,4 @@ A flowchart illustrating the routes the attacker may take when completing the sc
 6. 다른 현재 정책의 버전을 변경한다.
 7. S3에 대한 접근 권한을 획득하여 이에 접근하고 기밀 데이터를 탈취한다.
 
-A detailed cheat sheet & walkthrough for this route is available [here](./cheat_sheet.md). 
+자세한 풀이 방법은 [이곳]](./cheat_sheet.md)에서 확인가능하다.  
