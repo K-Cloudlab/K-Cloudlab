@@ -1,9 +1,9 @@
-# Scenario: [policy_rollback_ssrf]
+# Scenario: [policy_rollback_rce]
 **Size:** 작음
 
 **Difficulty:** 중
 
-**Command:** `./cloudgoat.py create policy_rollback_ssrf`
+**Command:** `./cloudgoat.py create policy_rollback_rce`
 
 ## Scenario Resources
 - 1 VPC (외부에서 접속이 가능하도록 설정하는 VPC)
