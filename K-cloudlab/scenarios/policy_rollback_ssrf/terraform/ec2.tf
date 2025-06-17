@@ -10,7 +10,7 @@ data "aws_ami" "amazon_linux_2023" {
 }
 
 // EC2 인스턴스 생성
-resource "aws_instance" "ssrf_server" {
+resource "aws_instance" "ec2_server" {
   ami                         = data.aws_ami.amazon_linux_2023.id
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.main.id
@@ -22,7 +22,7 @@ resource "aws_instance" "ssrf_server" {
   user_data = file("${path.module}/scripts/user_data.sh")
 
   tags = {
-    Name = "policy-rollback-ssrf-ec2"
+    Name = "policy-rollback-rce-ec2"
   }
 }
 

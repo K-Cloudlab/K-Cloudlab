@@ -5,7 +5,7 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "ssrf-privesc-vpc"
+    Name = "rce-privesc-vpc"
   }
 }
 
@@ -17,7 +17,7 @@ resource "aws_subnet" "main" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "ssrf-privesc-subnet"
+    Name = "rce-privesc-subnet"
   }
 }
 

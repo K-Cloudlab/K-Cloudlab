@@ -1,7 +1,7 @@
 # Scenario: [policy_rollback_ssrf]
-**Size:** Small/Medium/Large
+**Size:** 작음
 
-**Difficulty:** Easy/Moderate/Hard
+**Difficulty:** 중
 
 **Command:** `./cloudgoat.py create policy_rollback_ssrf`
 
@@ -12,25 +12,25 @@
 - 1 IAM Role (인스턴스에 부착된 역할, 정책 버전 존재)
 
 ## Scenario Start(s)
-1. SSRF가 가능한 웹 애플리케이션이 포함된 EC2 인스턴스의 공개 IP 주소가 제공된다.
+1. RCE가 가능한 웹 애플리케이션이 포함된 EC2 인스턴스의 공개 IP 주소가 제공된다.
 
 
 ## Scenario Goal(s)
 S3 버킷의 기밀 데이터를 탈취한다.
 
 ## Summary
-SSRF 취약점을 가진 EC2 인스턴스를 통해 메타데이터 서비스에 접근하고,
+RCE 취약점을 가진 EC2 인스턴스를 통해 메타데이터 서비스에 접근하고,
 얻은 임시 자격증명으로 IAM 정책을 롤백하여 S3에서 기밀 데이터를 탈취한다.
 
 
 ## Exploitation Route
 A flowchart illustrating the routes the attacker may take when completing the scenario. Lucidchart is recommended.
 <예시>
-![Scenario Route(s)](https://rhinosecuritylabs.com/wp-content/uploads/2018/07/cloudgoat-e1533043938802-1140x400.jpg)
+![flowchart](https://github.com/user-attachments/assets/d85f94b4-a91b-4ff1-9dc1-02505b023392)
 
 ## Walkthrough - [SERVICE] Secrets
 
-1. SSRF가 가능한 웹 애플리케이션이 포함된 EC2 인스턴스의 공개 IP 주소가 제공된다.
+1. RCE가 가능한 웹 애플리케이션이 포함된 EC2 인스턴스의 공개 IP 주소가 제공된다.
 2. 해당 웹서버의 취약점을 파악하고 메타데이터 서비스로 요청을 보낸 결과를 받을 수 있다는 것을 확인한다.
 3. 메타데이터 서비스로 요청을 보내 EC2의 역할에 대한 자격 증명을 획득한다.
 4. 해당 자격 증명으로 프로파일을 만들어 정책을 조회하여 2가지 버전의 정책이 있다는 것을 확인한다.
