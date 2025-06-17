@@ -4,3 +4,5 @@ K-cloudlab/created_scenario/terraform.tfstate.backup
 K-cloudlab/created_scenario/policies/
 K-cloudlab/created_scenario/.terraform/
 K-cloudlab/created_scenario/scripts/
+K-cloudlab/created_scenario
+K-cloudlab/created_scenario/created_scenario.txt
