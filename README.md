@@ -18,6 +18,7 @@
 (Windows 기준 Windows → AMD64를 다운로드)  
 [테라폼 다운로드 링크](https://developer.hashicorp.com/terraform/install)
 
+[terraform](./image_1.png)
 다운로드 하면 위와 같이 terraform.exe와 라이센스 파일이 들어있다.  
 이를 내 PC에서 원하는 위치에 저장하면 된다. (본 예시에서는 C:\Terraform 를 디렉터리로 사용)
 
