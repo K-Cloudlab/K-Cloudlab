@@ -2,7 +2,7 @@
 
 **Size:** 작음
 
-**Difficulty:** 
+**Difficulty:** 중
 
 **Command:** `./cloudgoat.py create lambda_privesc_bypass`
 
