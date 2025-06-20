@@ -24,6 +24,9 @@
   이를 내 PC에서 원하는 위치에 저장하면 된다. (본 예시에서는 C:\Terraform 를 디렉터리로 사용)
 
   ![Image](https://github.com/user-attachments/assets/e5978192-4e7c-4b6c-b9f1-6df151167193)
+  이후 환경 변수 설정에 들어가서 해당 경로를 추가해주면 terraform 설치는 완료된다.
+
+    
 ## 시나리오 별 설명
 - ~~
 - ~~
