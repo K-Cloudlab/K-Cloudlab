@@ -51,14 +51,18 @@
   kcloudlab.py가 있는 디렉터리로 들어가서 환경 구축을 해주면 된다.
 
   - 시나리오 시작 명령어
-    start
-
+    ```bash
+    python kcloudlab.py start <scenario_name> --profile kcloudlab
+    ```
+    <scenario_name>에 원하는 시나리오의 이름을 적어주면 환경 구성이 시작된다.
+    (반드시 관리자 권한이 있는 프로파일을 사용해야 한다)  
 
   - 시나리오 종료 명령어
-    finish
+     ```bash
+    python kcloudlab.py finish --profile kcloudlab
+    ```
+    시나리오 시작과 반대로 종료를 할 때는 시나리오 이름을 적을 필요가 없다.
+    (본 침투 테스트 시뮬레이터에서는 한 번에 하나의 시나리오만 생성 가능하도록 설계되었다)
     
-## 시나리오 별 설명
-- ~~
-- ~~
-- ~~
+
 
