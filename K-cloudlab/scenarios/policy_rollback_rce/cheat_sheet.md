@@ -1,4 +1,4 @@
-# [policy_rollback_rce] 공격 흐름
+# [policy_rollback_rce] 모범 답안
 
 1. 웹사이트에 RCE취약점이 발생하는 것을 확인하세요. 단순한 ping test화면 같지만 command injection을 통해 RCE가 발생하게 됩니다.
 ```bash
