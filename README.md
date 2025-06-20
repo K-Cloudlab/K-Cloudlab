@@ -14,7 +14,7 @@
 ## 환경 구축
 - 다양한 시나리오를 통해 AWS 침투테스트 환경 구축
 - 클라우드 인프라, 취약점, Terraform, 시나리오 구성 등에 대한 시야 확장
-
+[테라폼 다운로드 링크](https://developer.hashicorp.com/terraform/install)
 
 ## 시나리오 별 설명
 - ~~
