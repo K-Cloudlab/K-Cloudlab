@@ -43,13 +43,8 @@ Trust Policy 조건을 우회하고 높은 권한 세션을 획득합니다.
 플래그를 얻는 것으로 공격이 완료됩니다.
 
 ### 공격 루트
-
-1. 사용자 권한 열람
-2. IAM 역할 구조 분석 (관리자급 역할 찾기)
-3. Lambda 함수 생성 + DebugRole 부여
-4. Lambda 내부에서 sts:AssumeRole(lambdaManagerRole)
-5. 세션 획득 후 S3 또는 RDS 접근
-6. 플래그 획득
+예시
+![공격 루트 예시](./lambda.jpg)
 
 ## 세부 공격 흐름
 
