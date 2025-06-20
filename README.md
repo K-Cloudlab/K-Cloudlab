@@ -12,7 +12,7 @@
 - 공격자의 입장에서 취약한 인프라에 대한 침투 테스트를 수행함으로써 인프라 보안에 대한 이해도 향상
 
 ## 환경 구축
-- 환경 구축을 수행하고자 하는 PC에서 terraform 설치 필요하다.
+- 환경 구축을 수행하고자 하는 PC에서 terraform 설치가 필요하다.
   
   아래 링크에서 terraform 다운로드를 진행하면 된다.  
   (Windows 기준 Windows → AMD64를 다운로드)  
@@ -25,6 +25,10 @@
 
   ![Image](https://github.com/user-attachments/assets/e5978192-4e7c-4b6c-b9f1-6df151167193)  
   이후 환경 변수 설정에 들어가서 해당 경로를 추가해주면 terraform 설치는 완료된다.
+
+- 이후 AWS CLI 설치가 필요하다.
+  아래 링크를 통해 ACI 공식 DOC에서 AWS CLI V2를 설치하면 된다.  
+  [AWS CLI 설치 링크](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/getting-started-install.html)
 
     
 ## 시나리오 별 설명
