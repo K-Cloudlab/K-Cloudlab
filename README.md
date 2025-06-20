@@ -12,10 +12,14 @@
 - 공격자의 입장에서 취약한 인프라에 대한 침투 테스트를 수행함으로써 인프라 보안에 대한 이해도 향상
 
 ## 환경 구축
-- 환경 구축을 수행하고자 하는 PC에서 terraform 설치 필요  
-아래 링크에서 terraform 다운로드  
-*Windows 기준 Windows → AMD64를 다운로드  
+- 환경 구축을 수행하고자 하는 PC에서 terraform 설치 필요하다.
+  
+아래 링크에서 terraform 다운로드를 진항하면 된다.  
+(Windows 기준 Windows → AMD64를 다운로드)  
 [테라폼 다운로드 링크](https://developer.hashicorp.com/terraform/install)
+
+다운로드 하면 위와 같이 terraform.exe와 라이센스 파일이 들어있다.  
+이를 내 PC에서 원하는 위치에 저장하면 된다. (본 예시에서는 C:\Terraform 를 디렉터리로 사용)
 
 ## 시나리오 별 설명
 - ~~
