@@ -40,8 +40,22 @@
   <br/>
 
   ![Image](https://github.com/user-attachments/assets/b79821b4-82f3-451d-b91a-ee3faa644cb3)  
-  aws --version 명령어를 입력했을 때 정상적으로 버전 정보를 확인할 수 있으면 성공적으로 설치된 것이다.
+  aws --version 명령어를 입력했을 때 정상적으로 버전 정보를 확인할 수 있으면 성공적으로 설치된 것이다.  
+<br/>
   
+![Image](https://github.com/user-attachments/assets/a5744f5a-b9ad-4b49-9e64-e348d72a696c)  
+- AWS CLI 설치가 완료되면 새로운 다양한 리소스를 생성할 수 있도록 관리자 권한이 포함된 IAM 사용자를 생성하여 자격증명 새로운 프로파일로 등록해주어야 한다.
+<br/>
+
+- 다음으로 본 GitHub의 코드를 전부 받아준다.
+  kcloudlab.py가 있는 디렉터리로 들어가서 환경 구축을 해주면 된다.
+
+  - 시나리오 시작 명령어
+    start
+
+
+  - 시나리오 종료 명령어
+    finish
     
 ## 시나리오 별 설명
 - ~~
