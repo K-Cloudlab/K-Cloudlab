@@ -47,7 +47,7 @@
 ![Image](https://github.com/user-attachments/assets/a5744f5a-b9ad-4b49-9e64-e348d72a696c)  
 <br/>
 
-- 다음으로 본 GitHub의 코드를 전부 받아주면 환경 구축은 완료된다.
+- 다음으로 본 GitHub의 코드를 전부 받아주면 환경 구축은 완료된다.  
   <br/><br/>
   
 ## 시나리오 생성
