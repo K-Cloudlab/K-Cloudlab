@@ -28,8 +28,12 @@
 
 - 이후 AWS CLI 설치가 필요하다.
   아래 링크를 통해 ACI 공식 DOC에서 AWS CLI V2를 설치하면 된다.  
-  [AWS CLI 설치 링크](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/getting-started-install.html)
+  [AWS CLI 설치 링크](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/getting-started-install.html)  
+  
 
+  ![Image](https://github.com/user-attachments/assets/b79821b4-82f3-451d-b91a-ee3faa644cb3)  
+  aws --version 명령어를 입력했을 때 정상적으로 버전 정보를 확인할 수 있으면 성공적으로 설치된 것이다.
+  
     
 ## 시나리오 별 설명
 - ~~
