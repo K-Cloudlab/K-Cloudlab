@@ -60,8 +60,9 @@
     <scenario_name>에 원하는 시나리오의 이름을 적어주면 환경 구성이 시작된다.  
     (반드시 관리자 권한이 있는 프로파일을 사용해야 한다)  
 <br/>
+
   - 시나리오 종료 명령어
-     ```bash
+    ```bash
     python kcloudlab.py finish --profile kcloudlab
     ```
     시나리오 시작과 반대로 종료를 할 때는 시나리오 이름을 적을 필요가 없다.  
