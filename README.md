@@ -14,14 +14,16 @@
 ## 환경 구축
 - 환경 구축을 수행하고자 하는 PC에서 terraform 설치 필요하다.
   
-아래 링크에서 terraform 다운로드를 진항하면 된다.  
-(Windows 기준 Windows → AMD64를 다운로드)  
-[테라폼 다운로드 링크](https://developer.hashicorp.com/terraform/install)
+  아래 링크에서 terraform 다운로드를 진행하면 된다.  
+  (Windows 기준 Windows → AMD64를 다운로드)  
+  [테라폼 다운로드 링크](https://developer.hashicorp.com/terraform/install)
+  
+  
+  ![Image](https://github.com/user-attachments/assets/ef684775-b07f-491a-811f-abdf76bf9818)  
+  다운로드 하면 위와 같이 terraform.exe와 라이센스 파일이 들어있다.  
+  이를 내 PC에서 원하는 위치에 저장하면 된다. (본 예시에서는 C:\Terraform 를 디렉터리로 사용)
 
-![Image](https://github.com/user-attachments/assets/ef684775-b07f-491a-811f-abdf76bf9818)  
-다운로드 하면 위와 같이 terraform.exe와 라이센스 파일이 들어있다.  
-이를 내 PC에서 원하는 위치에 저장하면 된다. (본 예시에서는 C:\Terraform 를 디렉터리로 사용)
-
+  ![Image](https://github.com/user-attachments/assets/e5978192-4e7c-4b6c-b9f1-6df151167193)
 ## 시나리오 별 설명
 - ~~
 - ~~
