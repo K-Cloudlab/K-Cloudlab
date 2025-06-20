@@ -1,10 +1,10 @@
-# Scenario: [SCENARIO_NAME]
+# Scenario: [lambda_privesc_bypass]
 
-**Size:** Small/Medium/Large
+**Size:** 작음
 
-**Difficulty:** Easy/Moderate/Hard
+**Difficulty:** 중
 
-**Command:** `./cloudgoat.py create [SCENARIO_NAME]`
+**Command:** `./cloudgoat.py create lambda_privesc_bypass`
 
 ## Scenario Resources
 
