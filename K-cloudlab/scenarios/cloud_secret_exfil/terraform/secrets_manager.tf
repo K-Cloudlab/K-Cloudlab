@@ -3,7 +3,7 @@ resource "random_string" "secret_suffix" {
   length  = 16
   upper   = true
   lower   = true
-  number  = true
+  numric  = true
   special = false
 }
 
