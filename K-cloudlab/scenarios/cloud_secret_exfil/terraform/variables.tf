@@ -31,7 +31,3 @@ variable "stack-name" {
   type        = string
 }
 
-resource "aws_route_table_association" "public_assoc" {
-  subnet_id      = aws_subnet.main.id
-  route_table_id = aws_route_table.public.id
-}
