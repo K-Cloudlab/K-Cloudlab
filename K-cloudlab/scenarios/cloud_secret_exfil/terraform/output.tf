@@ -16,10 +16,10 @@ output "attacker2 - hard route" {
   value       = "hard"
 }
 
-output "attacker2(hard route)_access_key" {
+output "attacker2_access_key" {
   value     = aws_iam_access_key.attacker_user_key_2.id
 }
 
-output "attacker2(hard route)_secret_key" {
+output "attacker2_secret_key" {
   value     = nonsensitive(aws_iam_access_key.attacker_user_key_2.secret)
 }
