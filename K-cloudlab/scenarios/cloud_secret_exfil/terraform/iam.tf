@@ -115,9 +115,8 @@ resource "aws_iam_user_policy" "attacker_user_policy_1" {
         Effect = "Allow",
         Action = [
           "sts:GetCallerIdentity",
-          "iam:ListRoles",
-          "iam:ListAttachedUserPolicies",
-          "iam:ListUsers"
+          "iam:List*",
+          "iam:Get*"
         ],
         Resource = "*"
       },
@@ -168,9 +167,8 @@ resource "aws_iam_user_policy" "attacker_user_policy_2" {
         Effect = "Allow",
         Action = [
           "sts:GetCallerIdentity",
-          "iam:ListRoles",
-          "iam:ListAttachedUserPolicies",
-          "iam:ListUsers"
+          "iam:List*",
+          "iam:Get*"
         ],
         Resource = "*"
       }
