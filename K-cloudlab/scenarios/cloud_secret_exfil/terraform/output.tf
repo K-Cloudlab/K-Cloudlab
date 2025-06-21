@@ -3,5 +3,5 @@ output "attacker_user_access_key" {
 }
 
 output "attacker_user_secret_key" {
-  value     = aws_iam_access_key.attacker_user_key.secret
+  value     = nonsensitive(aws_iam_access_key.attacker_user_key.secret)
 }
