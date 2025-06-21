@@ -168,7 +168,7 @@ resource "aws_iam_user_policy" "attacker_user_policy_2" {
         Action = [
           "sts:GetCallerIdentity",
           "iam:List*",
-          "iam:Get*"
+          "iam:Get*",
           "ec2:Describe*"
         ],
         Resource = "*"
