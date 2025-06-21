@@ -127,7 +127,8 @@ resource "aws_iam_user_policy" "attacker_user_policy_1" {
           "s3:GetBucketNotification",
           "s3:PutBucketNotification",
           "s3:PutObject",
-          "s3:PutObjectAcl"
+          "s3:PutObjectAcl",
+          "s3:List*"
         ],
         Resource = "*"
       }
