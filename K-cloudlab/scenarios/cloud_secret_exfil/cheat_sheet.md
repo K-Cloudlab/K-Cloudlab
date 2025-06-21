@@ -32,7 +32,7 @@ session-manager-plugin
 
 6. 접속할 인스턴스의 id를 확인한다.
 ```bash
-aws iam list-attached-role-policies --role-name <역할 이름> --profile rce_server
+aws ec2 describe-instances --query "Reservations[].Instances[].InstanceId" --output text --profile easyroute
 ```
 
 
@@ -51,8 +51,8 @@ aws secretsmanager list-secrets
 ```bash
 aws secretsmanager get-secret-value --secret-id secretFLAG-OrcAHYV87Uuzb1KB
 ```
-
-
+<br/><br/>
+## Hard Route
 10. v2의 정책으로 교체해준다.
 ```bash
 aws iam set-default-policy-version --policy-arn <정책의 arn> --profile rce_server --version-id v2
