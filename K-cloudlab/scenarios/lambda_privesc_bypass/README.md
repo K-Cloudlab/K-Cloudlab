@@ -6,7 +6,7 @@
 
 **명령어** : $ ./cloudgoat.py create lambda_privesc_bypass 
 
-### 시나리오 리소스
+## 시나리오 리소스
 
 - 1 IAM 사용자 (attacker-user)
 - 1 Lambda 실행 역할 (DebugRole)
