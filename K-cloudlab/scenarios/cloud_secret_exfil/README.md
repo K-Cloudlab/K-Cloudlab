@@ -32,7 +32,8 @@ hard route - 탈취한 자격 증명을 이용해 람다 트리거를 해제하�
 
 ## 공격 루트
 <예시>
-![flowchart](https://github.com/user-attachments/assets/d85f94b4-a91b-4ff1-9dc1-02505b023392)
+![Image](https://github.com/user-attachments/assets/affa3e11-ebbd-49ae-b687-57b00f53f1c7)
+![Image](https://github.com/user-attachments/assets/a5744f5a-b9ad-4b49-9e64-e348d72a696c)
 
 ## 세부 공격 흐름
 
