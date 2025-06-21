@@ -5,9 +5,9 @@
 aws configure --profile easy_route
 ```
 
-2. 자신의 권한을 확인하여 
+2. 자신의 권한을 확인하여 SSM 세션을 시작할 수 있다는 것을 확인한다.
 ```bash
-; TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"); curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/
+
 ```
 
 3. 메타데이터서비스를 통해 인스턴스에 할당된 역할을 확인할 수 있다.
