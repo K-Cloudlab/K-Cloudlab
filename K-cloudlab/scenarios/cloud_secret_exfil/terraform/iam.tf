@@ -169,6 +169,7 @@ resource "aws_iam_user_policy" "attacker_user_policy_2" {
           "sts:GetCallerIdentity",
           "iam:List*",
           "iam:Get*"
+          "ec2:Describe*"
         ],
         Resource = "*"
       }
