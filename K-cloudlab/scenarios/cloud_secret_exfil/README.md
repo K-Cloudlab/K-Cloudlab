@@ -54,4 +54,4 @@ hard route - 탈취한 자격 증명을 이용해 람다 트리거를 해제하�
   10. 해당 리버스 쉘을 이용하여 SSM의 Secrets Manager에 접근하여 비밀 FLAG를 탈취한다.<br/>
 
   <br/>
-  자세한 풀이 방법은 [이곳](./cheat_sheet.md)에서 확인가능하다.  
+
