@@ -33,20 +33,20 @@ hard route - 탈취한 자격 증명을 이용해 람다 트리거를 해제하�
 
 
 ## 세부 공격 흐름
-1. 2개의 IAM 사용자 계정이 제공된다.
+2개의 IAM 사용자 계정이 제공된다.
 <br/>
   Easy Route  <br/>
-  2. 탈취한 자격 증명을 통해 Easy-Route-EC2에 SSM Session Manager를 통해 접근한다.<br/>
-  3. 접속한 EC2의 권한을 통해 SSM의 Secrets Manager로부터 비밀 FLAG값을 탈취한다.
+  1. 탈취한 자격 증명을 통해 Easy-Route-EC2에 SSM Session Manager를 통해 접근한다.<br/>
+  2. 접속한 EC2의 권한을 통해 SSM의 Secrets Manager로부터 비밀 FLAG값을 탈취한다.
   <br/><br/>
   Hard Route  <br/>
-  2. S3 버킷의 exec.sh 파일을 변경한다.<br/>
-  3. 람다 함수가 트리거되어 변경 사항이 바로 롤백되는 것을 확인한다.<br/>
-  4. 탈취한 자격 증명을 통해 람다 함수를 수정하여 트리거를 해제한다.<br/>
-  5. 리버스 쉘을 실행시키는 스크립트를 작성한다.<br/>
-  6. S3내의 exec.sh파일을 자신이 작성한 공격 스크립트로 덮어쓴다.<br/>
-  7. EC2에서 해당 exec.sh파일을 받아 실행하여 연결이 이루어진다.<br/>
-  8. 해당 리버스 쉘을 이용하여 SSM의 Secrets Manager에 접근하여 비밀 FLAG를 탈취한다.<br/>
+  1. S3 버킷의 exec.sh 파일을 변경한다.<br/>
+  2. 람다 함수가 트리거되어 변경 사항이 바로 롤백되는 것을 확인한다.<br/>
+  3. 탈취한 자격 증명을 통해 람다 함수를 수정하여 트리거를 해제한다.<br/>
+  4. 리버스 쉘을 실행시키는 스크립트를 작성한다.<br/>
+  5. S3내의 exec.sh파일을 자신이 작성한 공격 스크립트로 덮어쓴다.<br/>
+  6. EC2에서 해당 exec.sh파일을 받아 실행하여 연결이 이루어진다.<br/>
+  7. 해당 리버스 쉘을 이용하여 SSM의 Secrets Manager에 접근하여 비밀 FLAG를 탈취한다.<br/>
 
   <br/>
 
