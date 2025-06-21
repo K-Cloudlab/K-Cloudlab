@@ -1,7 +1,15 @@
-output "attacker_user_access_key" {
-  value     = aws_iam_access_key.attacker_user_key.id
+output "attacker1(easy route)_access_key" {
+  value     = aws_iam_access_key.attacker_user_key_1.id
 }
 
-output "attacker_user_secret_key" {
-  value     = nonsensitive(aws_iam_access_key.attacker_user_key.secret)
+output "attacker1(easy route)_secret_key" {
+  value     = nonsensitive(aws_iam_access_key.attacker_user_key_1.secret)
+}
+
+output "attacker2(hard route)_access_key" {
+  value     = aws_iam_access_key.attacker_user_key_2.id
+}
+
+output "attacker2(hard route)_secret_key" {
+  value     = nonsensitive(aws_iam_access_key.attacker_user_key_2.secret)
 }

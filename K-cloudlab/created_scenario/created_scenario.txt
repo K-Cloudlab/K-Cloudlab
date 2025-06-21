@@ -1,1 +1,1 @@
-scenario=cloud_secret_exfil
+scenario=none
