@@ -22,25 +22,22 @@ resource "aws_iam_policy" "vuln_policy" {
   policy      = file("policies/ec2role.json")
 }
 
-// EC2 역할에 취약 정책 붙이기
 resource "aws_iam_role_policy_attachment" "attach_policy" {
   role       = aws_iam_role.ec2_role.name
   policy_arn = aws_iam_policy.vuln_policy.arn
 }
 
-// EC2 역할에 SSM 권한 추가 (AmazonSSMManagedInstanceCore)
 resource "aws_iam_role_policy_attachment" "attach_ssm_policy" {
   role       = aws_iam_role.ec2_role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
 }
 
-// EC2 인스턴스 프로파일 생성
 resource "aws_iam_instance_profile" "ec2_profile" {
   name = "cloud-secret-exfil-instance-profile"
   role = aws_iam_role.ec2_role.name
 }
 
-// Lambda Role
+// Lambda Role (기존과 동일)
 resource "aws_iam_role" "lambda_exec_role" {
   name = "lambda_exec_role"
   assume_role_policy = jsonencode({
@@ -79,19 +76,41 @@ resource "aws_iam_role_policy" "lambda_policy" {
   })
 }
 
-// IAM User - attacker-user 생성
-resource "aws_iam_user" "attacker_user" {
-  name = "attacker-user"
+// attacker-user-1: Lambda 트리거(이벤트 소스 매핑) 수정 권한 사용자
+resource "aws_iam_user" "attacker_user_1" {
+  name = "attacker-user-1"
 }
 
-// attacker-user 정책 - 기존 권한 + SSM 세션 관련 권한 추가
-resource "aws_iam_user_policy" "attacker_user_policy" {
-  name = "attacker-user-policy"
-  user = aws_iam_user.attacker_user.name
+resource "aws_iam_user_policy" "attacker_user_policy_1" {
+  name = "attacker-user-policy-1"
+  user = aws_iam_user.attacker_user_1.name
 
   policy = jsonencode({
     Version = "2012-10-17",
     Statement = [
+      // Lambda 이벤트 소스 매핑 관련 권한 (변경 가능)
+      {
+        Effect = "Allow",
+        Action = [
+          "lambda:ListEventSourceMappings",
+          "lambda:UpdateEventSourceMapping",
+          "lambda:DeleteEventSourceMapping"
+        ],
+        Resource = "*"
+      },
+      // Lambda 함수 조회 및 권한 관련 권한
+      {
+        Effect = "Allow",
+        Action = [
+          "lambda:GetFunction",
+          "lambda:GetPolicy",
+          "lambda:ListFunctions",
+          "lambda:AddPermission",
+          "lambda:RemovePermission"
+        ],
+        Resource = "*"
+      },
+      // 기타 필요한 조회 권한 
       {
         Effect = "Allow",
         Action = [
@@ -102,20 +121,7 @@ resource "aws_iam_user_policy" "attacker_user_policy" {
         ],
         Resource = "*"
       },
-      {
-        Effect = "Allow",
-        Action = [
-          "lambda:GetFunction",
-          "lambda:GetPolicy",
-          "lambda:ListEventSourceMappings",
-          "lambda:UpdateEventSourceMapping",
-          "lambda:DeleteEventSourceMapping",
-          "lambda:ListFunctions",
-          "lambda:AddPermission",
-          "lambda:RemovePermission"
-        ],
-        Resource = "*"
-      },
+      // S3 객체 쓰기 및 알림 권한 (기존과 동일)
       {
         Effect = "Allow",
         Action = [
@@ -125,7 +131,28 @@ resource "aws_iam_user_policy" "attacker_user_policy" {
           "s3:PutObjectAcl"
         ],
         Resource = "*"
-      },
+      }
+    ]
+  })
+}
+
+resource "aws_iam_access_key" "attacker_user_key_1" {
+  user = aws_iam_user.attacker_user_1.name
+}
+
+// attacker-user-2: EC2 SSM 접속 권한 사용자
+resource "aws_iam_user" "attacker_user_2" {
+  name = "attacker-user-2"
+}
+
+resource "aws_iam_user_policy" "attacker_user_policy_2" {
+  name = "attacker-user-policy-2"
+  user = aws_iam_user.attacker_user_2.name
+
+  policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      // SSM 세션 시작 및 관리 권한
       {
         Effect = "Allow",
         Action = [
@@ -135,12 +162,22 @@ resource "aws_iam_user_policy" "attacker_user_policy" {
           "ssm:TerminateSession"
         ],
         Resource = "*"
+      },
+      // 기본 조회 권한 (선택적)
+      {
+        Effect = "Allow",
+        Action = [
+          "sts:GetCallerIdentity",
+          "iam:ListRoles",
+          "iam:ListAttachedUserPolicies",
+          "iam:ListUsers"
+        ],
+        Resource = "*"
       }
     ]
   })
 }
 
-// attacker-user 액세스 키 생성
-resource "aws_iam_access_key" "attacker_user_key" {
-  user = aws_iam_user.attacker_user.name
+resource "aws_iam_access_key" "attacker_user_key_2" {
+  user = aws_iam_user.attacker_user_2.name
 }
