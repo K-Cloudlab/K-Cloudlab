@@ -16,13 +16,11 @@
 - CloudWatch Logs (lambda 로그 확인용)
 
 ## 시나리오 시작
-
 1. attacker-user 계정의 AWS Access Key 및 Secret Key 제공
 2. 초기 권한: lambda:*, iam:PassRole (단, PassRole 리소스 제한 없음)
 3. lambdaManagerRole, DebugRole 부여
 
 ## 시나리오 목표
-
 Lambda 함수 내부에서 sts:AssumeRole을 실행하여
 직접적으로 접근할 수 없는 관리자급 역할(lambdaManagerRole)을 우회적으로 획득하고,
 해당 역할로 민감 자원(S3 또는 RDS)에 접근하여 **플래그를 탈취**하는 것이 목표입니다.
