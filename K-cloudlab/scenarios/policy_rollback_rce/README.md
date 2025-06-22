@@ -1,7 +1,7 @@
 # 시나리오: [policy_rollback_rce]
 **크기:** 소
 
-**난이도:** 중
+**난이도:** 중간
 
 **명령어:** `python kcloudlab.py start policy_rollback_rce --profile kcloudlab`
 
