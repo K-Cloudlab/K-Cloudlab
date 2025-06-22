@@ -24,7 +24,6 @@ RCE 취약점을 가진 EC2 인스턴스를 통해 메타데이터 서비스에 
 
 
 ## 공격 루트
-<예시>
 ![flowchart](https://github.com/user-attachments/assets/d85f94b4-a91b-4ff1-9dc1-02505b023392)
 
 ## 세부 공격 흐름
