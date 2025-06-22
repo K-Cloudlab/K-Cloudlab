@@ -3,7 +3,7 @@
 
 **난이도:** 중
 
-**명령어:** `./cloudgoat.py create policy_rollback_rce`
+**명령어:** `python kcloudlab.py start policy_rollback_rce`
 
 ## 시나리오 리소스
 - 1 VPC (외부에서 접속이 가능하도록 설정하는 VPC)
