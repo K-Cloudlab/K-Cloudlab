@@ -2,7 +2,7 @@
 
 **크기** : 중
 
-**난이도** : 중 
+**난이도** : 중간
 
 **명령어** : $ ./cloudgoat.py create lambda_privesc_bypass 
 
