@@ -8,7 +8,6 @@
 ```bash
 aws configure --profiled example
 ```
-<br/>
 ...
 <br/>
 FLAG{example_flag}
