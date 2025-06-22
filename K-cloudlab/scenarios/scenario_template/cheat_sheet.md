@@ -1,9 +1,12 @@
-# [SCENARIO NAME] Walkthrough
+# [scenario_name] 모범 답안
 
-## Summary
+1. 제공된 자격 증명 정보를 이용하여 새로운 프로파일을 생성한다.
+```bash
+aws configure --profiled example
+```
+<br/>
+...
+<br/>
+FLAG{example_flag}
 
-In this scenario, you are provided with.... You need to enumerate... Then, use the ... Finally, do this to get the final flag. 
 
-## Detailed Walkthrough
-
-The purpose of CloudGoat is to help people learn AWS Pentesting. Provide a detailed walkthrough for the scenario with this goal in mind. A good example to refer to is the walkthrough for the [SNS Secrets scenario](https://github.com/RhinoSecurityLabs/cloudgoat/blob/master/scenarios/sns_secrets/cheat_sheet.md)
