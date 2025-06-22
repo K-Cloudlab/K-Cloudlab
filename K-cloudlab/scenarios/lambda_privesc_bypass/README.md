@@ -4,7 +4,7 @@
 
 **난이도** : 중간
 
-**명령어** : $ ./cloudgoat.py create lambda_privesc_bypass 
+**명령어** : ```$ ./cloudgoat.py create lambda_privesc_bypass```
 
 ## 시나리오 리소스
 
