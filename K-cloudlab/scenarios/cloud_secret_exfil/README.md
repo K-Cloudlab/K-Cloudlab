@@ -38,8 +38,9 @@ hard route - 탈취한 자격 증명을 이용해 람다 트리거를 해제하�
   Easy Route  <br/>
   1. 탈취한 자격 증명을 통해 Easy-Route-EC2에 SSM Session Manager를 통해 접근한다.<br/>
   2. 접속한 EC2의 권한을 통해 SSM의 Secrets Manager로부터 비밀 FLAG값을 탈취한다.
-  <br/><br/>
-  Hard Route  <br/>
+
+     
+  Hard Route
   1. S3 버킷의 exec.sh 파일을 변경한다.<br/>
   2. 람다 함수가 트리거되어 변경 사항이 바로 롤백되는 것을 확인한다.<br/>
   3. 탈취한 자격 증명을 통해 람다 함수를 수정하여 트리거를 해제한다.<br/>
