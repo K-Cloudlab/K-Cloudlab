@@ -27,7 +27,7 @@ S3 버킷 내의 FLAG를 획득한다.
 
 
 ## 공격 루트
-![Image](https://github.com/user-attachments/assets/b2868f6b-c1e4-46c5-9184-f11a207b024b)
+(공격 루트를 한 눈에 알아보기 쉽게 이미지로 만들어서 삽입)
 
 
 ## 세부 공격 흐름
