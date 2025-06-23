@@ -8,11 +8,11 @@
 
 ## 시나리오 리소스
 
-- 1 IAM 사용자 
-- 1 Lambda 실행 역할 
-- 1 관리자급 IAM 역할
-- 1 Lambda 함수
-- 1 S3 버킷
+- IAM 사용자 x 1
+- Lambda 실행 역할 x 1
+- 관리자급 IAM 역할 x 1
+- Lambda 함수 x 1
+- S3 버킷 x 1
 
 ## 시나리오 시작
 1. attacker-user 계정의 AWS Access Key 및 Secret Key 제공
