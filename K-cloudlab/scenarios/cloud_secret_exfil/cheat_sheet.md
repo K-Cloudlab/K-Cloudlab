@@ -121,4 +121,4 @@ aws secretsmanager get-secret-value --secret-id secretFLAG-OrcAHYV87Uuzb1KB
 
 
 
-`flag` : FLAG{congratulations}
+`flag` : FLAG{C10ud_s3cr3t_exfi1trati0n}
