@@ -6,13 +6,13 @@
 **명령어:** `python kcloudlab.py start cloud_secret_exfil --profile <username>`
 
 ## 시나리오 리소스
-- 1 VPC (외부에서 접속이 가능하도록 설정하는 VPC)
-- 1 EC2 (S3로부터 exec.sh을 가져와서 실행하는 EC2)
-- 1 S3 (EC2가 받아서 실행할 파일을 저장)
-- 1 Lambda (S3의 이벤트를 트리거하는 람다 함수)
-- 2 IAM 사용자 (S3에 파일을 업로드할 수 있는 권한과 람다 관련 권한을 갖는 사용자와 SSM Session관련 권한을 갖는 사용자)
-- 1 SSM (Secrets Manager에 저장되어 있는 비밀 FLAG 값)
-- 2 IAM Role (SSM에 접근 가능한 EC2의 역할)
+- 1 VPC 
+- 1 EC2 
+- 1 S3
+- 1 Lambda 
+- 2 IAM 사용자
+- 1 SSM
+- 2 IAM Role
 
 ## 시나리오 시작
 1. 일반 사용자의 자격 증명 정보가 제공된다.
