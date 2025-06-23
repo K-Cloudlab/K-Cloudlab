@@ -42,7 +42,7 @@ KMS로 암호화된 플래그 파일을 복호화하여 획득하세요.
 
 ## 공격 루트
 
-`![attack-path](<img width="427" alt="Image" src="https://github.com/user-attachments/assets/25c46ea6-d84b-4bc7-824c-ba73abccabbc" />)`
+![attack-path](https://github.com/user-attachments/assets/f7bfee13-b983-4564-a31e-fe4f924b75df)
 
 ---
 
