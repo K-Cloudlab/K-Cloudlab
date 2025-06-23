@@ -1,4 +1,4 @@
-# K-shield Jr 14기 - Terraform을 이용한 시나리오 기반 AWS 침투 테스트 프로젝트
+# K-shield Jr 14기 - Terraform을 AWS 침투 테스트 교육용 시나리오 개발 프로젝트
 ---
 
 ## 프로젝트 설명
