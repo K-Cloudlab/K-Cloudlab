@@ -3,7 +3,7 @@
 
 **난이도:** 중간
 
-**명령어:** `python kcloudlab.py start policy_rollback_rce --profile kcloudlab`
+**명령어:** `python kcloudlab.py start policy_rollback_rce --profile <username>`
 
 ## 시나리오 리소스
 - VPC x 1
