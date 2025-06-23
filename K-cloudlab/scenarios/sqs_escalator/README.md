@@ -10,10 +10,10 @@
 
 - EC2 × 1  
 - S3 × 1  
-- KMS key × 1  
+- KMS × 1  
 - IAM 사용자 × 1  
 - IAM 역할 × 2  
-- SQS queue × 1
+- SQS × 1
 
 ## 시나리오 시작
 
