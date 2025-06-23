@@ -69,4 +69,4 @@ aws kms decrypt \
 ```
 
 <br/><br/>
-FLAG{escalation_success_kms_flag}
+`flag` : FLAG{escalation_success_kms_flag}
