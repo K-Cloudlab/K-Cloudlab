@@ -4,7 +4,7 @@
   
 **난이도:** 중간
 
-**명령어:** `python kcloudlab.py start sqs_escalator`
+**명령어:** `python kcloudlab.py start sqs_escalator --profile <username>`
 
 ## 시나리오 리소스
 
