@@ -2,18 +2,17 @@
 
 **크기** : 중
 
-**난이도** : 중간
+**난이도** : 쉬움
 
 **명령어** : ```$ ./cloudgoat.py create lambda_privesc_bypass```
 
 ## 시나리오 리소스
 
-- 1 IAM 사용자 (attacker-user)
-- 1 Lambda 실행 역할 (DebugRole)
-- 1 관리자급 IAM 역할 (lambdaManagerRole)
+- 1 IAM 사용자 
+- 1 Lambda 실행 역할 
+- 1 관리자급 IAM 역할
 - 1 Lambda 함수
-- 1 S3 버킷 또는 RDS 인스턴스 (플래그 저장)
-- CloudWatch Logs (lambda 로그 확인용)
+- 1 S3 버킷
 
 ## 시나리오 시작
 1. attacker-user 계정의 AWS Access Key 및 Secret Key 제공
