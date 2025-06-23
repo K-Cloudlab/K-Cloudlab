@@ -6,8 +6,6 @@
 
 **명령어:** `python kcloudlab.py start sqs_escalator`
 
----
-
 ## 시나리오 리소스
 
 - EC2 인스턴스 × 1  
@@ -17,19 +15,13 @@
 - IAM 역할 × 2  
 - SQS 큐 × 1
 
----
-
 ## 시나리오 시작
 
 제한된 권한만 가진 IAM 사용자가 SQS 메시지를 조회할 수 있는 상태에서 시작합니다.
 
----
-
 ## 시나리오 목표
 
 KMS로 암호화된 플래그 파일을 복호화하여 획득하세요.
-
----
 
 ## 요약
 
@@ -38,15 +30,11 @@ KMS로 암호화된 플래그 파일을 복호화하여 획득하세요.
 이후 `AssumeRole`을 통해 KMS 복호화 권한을 얻고,  
 암호화된 플래그를 성공적으로 복호화합니다.
 
----
-
 ## 공격 루트
 
 ![attack-path](https://github.com/user-attachments/assets/f7bfee13-b983-4564-a31e-fe4f924b75df)
 
----
-
-## HINT 공격 흐름
+## 세부 공격 흐름
 
 1. **attacker-user**는 SQS 메시지를 수신하여 EC2 인스턴스 IP, PEM 키 위치, 암호화된 플래그 경로, AssumeRole 힌트를 획득합니다.  
 2. S3에서 해당 키 파일을 다운로드한 후, 해당 키를 사용해 EC2 인스턴스에 SSH로 접속합니다.  
