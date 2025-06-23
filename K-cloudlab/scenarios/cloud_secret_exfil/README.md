@@ -6,13 +6,13 @@
 **명령어:** `python kcloudlab.py start cloud_secret_exfil --profile <username>`
 
 ## 시나리오 리소스
-- 1 VPC 
-- 1 EC2 
-- 1 S3
-- 1 Lambda 
-- 2 IAM 사용자
-- 1 SSM
-- 2 IAM Role
+- VPC x 1 
+- EC2 x 1 
+- S3 x 1
+- Lambda x 1 
+- IAM 사용자 x 2
+- SSM x 1
+- IAM 역할 x 2
 
 ## 시나리오 시작
 1. 일반 사용자의 자격 증명 정보가 제공된다.
