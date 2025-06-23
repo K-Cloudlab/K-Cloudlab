@@ -1,6 +1,7 @@
 # 시나리오 : [sqs-escalator]
 
-**크기:** 중    
+**크기:** 중   
+  
 **난이도:** 중간
 
 **명령어:** `python kcloudlab.py start sqs_escalator`
