@@ -4,7 +4,7 @@
 
 **난이도** : 쉬움
 
-**명령어** : ```$ ./cloudgoat.py create lambda_privesc_bypass```
+**명령어** : ```python kcloudlab.py start lambda_privesc_bypass --profile <username>```
 
 ## 시나리오 리소스
 
