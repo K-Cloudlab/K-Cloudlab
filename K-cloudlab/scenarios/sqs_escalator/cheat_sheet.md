@@ -1,7 +1,4 @@
 # [sqs_escalator] 모범 답안  
-<br/>
-답안을 보고 풀이를 직접 진행할 수 있도록 진행 과정을 상세하게 작성.  
-<br/><br/>
 
 1. Terraform을 통해 생성된 Access Key와 Secret Key를 사용하여 AWS CLI 프로파일을 구성한다.  
 ```bash
