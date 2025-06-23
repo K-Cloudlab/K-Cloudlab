@@ -1,7 +1,7 @@
 # 시나리오 : [sqs-escalator]
 
-**크기:** 중형  
-**난이도:** 높음  
+**크기:** 중
+**난이도:** 중간
 
 **명령어:** `python kcloudlab.py start sqs_escalator`
 
@@ -41,7 +41,7 @@ KMS로 암호화된 플래그 파일을 복호화하여 획득하세요.
 
 ## 공격 루트
 
-`[attack-path](./images/sqs-escalator-diagram.png)`
+`![attack-path](<img width="427" alt="Image" src="https://github.com/user-attachments/assets/25c46ea6-d84b-4bc7-824c-ba73abccabbc" />)`
 
 ---
 
