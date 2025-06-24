@@ -20,6 +20,7 @@
 1. attacker-user 계정의 AWS Access Key 및 Secret Key 제공
 2. 초기 권한: lambda:*, iam:PassRole (단, PassRole 리소스 제한 없음)
 3. lambdaManagerRole, DebugRole 부여
+4. s3명 : flag-bucket-lambda-privesc 
 
 ## 시나리오 목표
 
