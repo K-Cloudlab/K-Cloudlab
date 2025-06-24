@@ -38,7 +38,7 @@ Trust Policy 조건을 우회하고 높은 권한 세션을 획득합니다.
 플래그를 얻는 것으로 공격이 완료됩니다.
 
 ## 공격 루트
-![공격 루트 예시](./lambda.jpg)
+![Image](https://github.com/user-attachments/assets/3c8e5faf-bbb4-4815-920c-a9e2bc33bd5d)
 
 ## 세부 공격 흐름
 
