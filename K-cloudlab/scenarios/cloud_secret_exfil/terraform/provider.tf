@@ -13,7 +13,6 @@ terraform {
 }
 
 provider "aws" {
-  profile = var.profile
   region  = var.region
 
   # This configures default tags for all resources
@@ -24,3 +23,4 @@ provider "aws" {
     }
   }
 }
+

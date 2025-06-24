@@ -72,6 +72,6 @@ aws lambda invoke \
   outfile.txt | base64 -d
 ```
 
-FLAG{happyhappyhappy~!}
+`flag` : FLAG{happyhappyhappy~!}
 
 

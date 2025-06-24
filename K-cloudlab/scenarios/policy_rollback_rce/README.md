@@ -1,18 +1,18 @@
 # 시나리오: [policy_rollback_rce]
-**크기:** 작음
+**크기:** 소
 
-**난이도:** 중
+**난이도:** 중간
 
-**명령어:** `./cloudgoat.py create policy_rollback_rce`
+**명령어:** `python kcloudlab.py start policy_rollback_rce --profile <username>`
 
 ## 시나리오 리소스
-- 1 VPC (외부에서 접속이 가능하도록 설정하는 VPC)
-- 1 EC2 (취약점이 존재하는 웹서버가 동작)
-- 1 S3 (기밀 데이터를 저장하고 있는 저장소)
-- 1 IAM Role (인스턴스에 부착된 역할, 정책 버전 존재)
+- VPC x 1
+- EC2 x 1
+- S3 x 1
+- IAM 역할 x 1
 
 ## 시나리오 시작
-1. RCE가 가능한 웹 애플리케이션이 포함된 EC2 인스턴스의 공개 IP 주소가 제공된다.
+RCE가 가능한 웹 애플리케이션이 포함된 EC2 인스턴스의 공개 IP 주소가 제공된다.
 
 
 ## 시나리오 목표
@@ -24,7 +24,6 @@ RCE 취약점을 가진 EC2 인스턴스를 통해 메타데이터 서비스에 
 
 
 ## 공격 루트
-<예시>
 ![flowchart](https://github.com/user-attachments/assets/d85f94b4-a91b-4ff1-9dc1-02505b023392)
 
 ## 세부 공격 흐름
