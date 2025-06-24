@@ -2,7 +2,7 @@
 **크기:** 소/중/대
 
 **난이도:** 쉬움/중간/어려움
-
+ 
 **명령어:** `python kcloudlab.py start <scenario_name> --profile <username>`
 
 ## 시나리오 리소스
