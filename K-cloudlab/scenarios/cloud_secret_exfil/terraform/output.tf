@@ -22,4 +22,4 @@ output "attacker2_access_key" {
 
 output "attacker2_secret_key" {
   value     = nonsensitive(aws_iam_access_key.attacker_user_key_1.secret)
-}
+} 
