@@ -18,3 +18,4 @@ resource "aws_secretsmanager_secret_version" "secretFLAG_version" {
   secret_id     = aws_secretsmanager_secret.secretFLAG.id
   secret_string = file("${path.module}/scripts/secrets.json")
 }
+ 
