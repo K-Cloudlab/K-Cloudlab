@@ -46,7 +46,7 @@ Trust Policy 조건을 우회하고 높은 권한 세션을 획득합니다.
 2. Lambda 서비스에서만 사용할 수 있는 Debugrole이 존재함을 확인합니다.
 3. Lambda 함수를 생성하고, 실행 역할로 DebugRole을 설정합니다 (iam:passrole 활용).
 4. Lambda 내부 코드에서 boto3.sts.assume_role()을 사용하여 lambdaManagerRole을 Assume합니다.
-5. AssumeRole 호출이 성공하면, 반환된 세션 자격 증명을 사용해 S3 또는 RDS 접근을 시도합니다.
+5. AssumeRole 호출이 성공하면, 반환된 세션 자격 증명을 사용해 S3접근을 시도합니다.
 6. 자원에 접근하여 플래그를 확인하고, 최종적으로 플래그를 획득합니다
 
 자세한 풀이 방법은 [이곳](./cheat_sheet.md)에서 확인가능하다.  
